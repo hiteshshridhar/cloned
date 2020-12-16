@@ -1,0 +1,17 @@
+<% if (prods.length > 0) { %>
+    <div class="productrow">
+      <% for (let product of prods) { %>
+      <div class="productcolumn">
+        <div class="productcard">
+          <img src="<%= product.imageUrl %>" alt="" />
+          <div class="productcontainer">
+            <h4><b><%= product.title %></b></h4>
+            <p>€ <%= product.price %></p>
+          </div>
+        </div>
+      </div>
+      <% } %>
+    </div>
+    <% } else { %>
+    <h3>Oh Snap! No Products Found!</h3>
+    <% } %>
